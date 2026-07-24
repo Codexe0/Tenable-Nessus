@@ -136,7 +136,7 @@ Download the official Tenable Nessus installation package for Debian/Ubuntu Linu
 
 > 📸 **Screenshot — Tenable Downloads Portal:**
 
-![Downloading Tenable Nessus 10.12.1 installer on Kali Linux](Nessus%20Download%20Link.png)
+![Downloading Tenable Nessus 10.12.1 installer on Kali Linux](screenshots/Nessus%20Download%20Link.png)
 
 ```bash
 # Navigate to downloads directory and verify file download
@@ -152,7 +152,7 @@ Install the `.deb` package using `dpkg` or `apt`, then manage the `nessusd` syst
 
 > 📸 **Screenshot — Checking initial status and starting `nessusd` service:**
 
-![Executing systemctl status and start commands for nessusd](CMD%20to%20start%20and%20check%20status%20of%20Nessus.png)
+![Executing systemctl status and start commands for nessusd](screenshots/CMD%20to%20start%20and%20check%20status%20of%20Nessus.png)
 
 ```bash
 # Install Nessus package
@@ -172,7 +172,7 @@ Now enable the daemon so that Nessus starts automatically upon system startup:
 
 > 📸 **Screenshot — Enabling Nessus service for persistent auto-start:**
 
-![Enabling nessusd service with systemctl enable](Enabled%20the%20Nessus%20Services.png)
+![Enabling nessusd service with systemctl enable](screenshots/Enabled%20the%20Nessus%20Services.png)
 
 ```bash
 # Enable service on boot
@@ -190,7 +190,7 @@ Access the web interface at `https://192.168.10.131:8834/#/` using your browser.
 
 > 📸 **Screenshot — Nessus Web UI Setup Screen:**
 
-![Welcome screen for Nessus Setup interface](Register%20in%20the%20Nessus%20using%20ip.png)
+![Welcome screen for Nessus Setup interface](screenshots/Register%20in%20the%20Nessus%20using%20ip.png)
 
 1. Select **Nessus Essentials** (Free Tier).
 2. Enter your activation key obtained from Tenable.
@@ -199,7 +199,7 @@ Access the web interface at `https://192.168.10.131:8834/#/` using your browser.
 
 > 📸 **Screenshot — Plugin Compilation & Database Download:**
 
-![Nessus initializing progress bar downloading plugins](Downloading%20Plugins.png)
+![Nessus initializing progress bar downloading plugins](screenshots/Downloading%20Plugins.png)
 
 ---
 
@@ -211,7 +211,7 @@ To simulate a real-world vulnerable asset safely, we install Docker and spin up 
 
 > 📸 **Screenshot — Installing `docker.io` package on Kali Linux:**
 
-![Running apt install docker.io package command](Docker%20install%20for%20testing.png)
+![Running apt install docker.io package command](screenshots/Docker%20install%20for%20testing.png)
 
 ```bash
 # Update package repositories and install docker
@@ -224,11 +224,11 @@ sudo apt update && sudo apt install docker.io -y
 
 > 📸 **Screenshot — Starting Docker Service:**
 
-![Executing sudo systemctl start docker command](Started%20the%20Docker.png)
+![Executing sudo systemctl start docker command](screenshots/Started%20the%20Docker.png)
 
 > 📸 **Screenshot — Verifying Active Docker Service:**
 
-![Checking docker.service status active and running](Status%20of%20Docker.png)
+![Checking docker.service status active and running](screenshots/Status%20of%20Docker.png)
 
 ```bash
 # Start Docker service
@@ -246,7 +246,7 @@ Pull and launch the containerized application mapped to local port 80:
 
 > 📸 **Screenshot — Docker pulling and launching DVWA container:**
 
-![Executing sudo docker run command for web-dvwa container](Run%20the%20Docker.png)
+![Executing sudo docker run command for web-dvwa container](screenshots/Run%20the%20Docker.png)
 
 ```bash
 # Run DVWA in interactive container mode mapping port 80
@@ -263,7 +263,7 @@ Navigate to `http://127.0.0.1/` in Mozilla Firefox to confirm the vulnerable app
 
 > 📸 **Screenshot — DVWA Target Interface loaded in browser:**
 
-![Damn Vulnerable Web Application homepage running on localhost](Opens%20the%20DVWA.png)
+![Damn Vulnerable Web Application homepage running on localhost](screenshots/Opens%20the%20DVWA.png)
 
 ---
 
@@ -277,7 +277,7 @@ Set up the general target parameters:
 
 > 📸 **Screenshot — Basic Network Scan Configuration:**
 
-![Configuring scan parameters for DVWA target 127.0.0.1](Network%20Scan.png)
+![Configuring scan parameters for DVWA target 127.0.0.1](screenshots/Network%20Scan.png)
 
 #### Scan Settings Configuration
 
@@ -308,7 +308,7 @@ Once scanning completes, view the high-level assessment overview under the **Hos
 
 > 📸 **Screenshot — Host Overview & Vulnerability Severity Distribution:**
 
-![Host scan report showing 127.0.0.1 results, CVSS v3 base, and vulnerability distribution chart](Host.png)
+![Host scan report showing 127.0.0.1 results, CVSS v3 base, and vulnerability distribution chart](screenshots/Host.png)
 
 #### Scan Summary Details
 
@@ -330,7 +330,7 @@ Click into host details to inspect individual plugin outputs and vulnerability f
 
 > 📸 **Screenshot — Detailed Vulnerability Findings List:**
 
-![Detailed table listing discovered vulnerabilities, severity levels, CVSS, and family categories](Vuln%20found%20during%20scan.png)
+![Detailed table listing discovered vulnerabilities, severity levels, CVSS, and family categories](screenshots/Vuln%20found%20during%20scan.png)
 
 #### Highlighted Finding Categories
 
@@ -393,20 +393,21 @@ Based on findings provided by Nessus scanning, the following security hardening 
 
 ```
 Tenable-Nessus/
-├── README.md                                  ← Project documentation (This file)
-├── CMD to start and check status of Nessus.png  ← Screenshot: Starting nessusd service
-├── Docker install for testing.png             ← Screenshot: Installing docker package
-├── Downloading Plugins.png                    ← Screenshot: Plugin compilation process
-├── Enabled the Nessus Services.png            ← Screenshot: Enabling service on boot
-├── Host.png                                   ← Screenshot: Overall host scan report
-├── Nessus Download Link.png                   ← Screenshot: Official download page
-├── Network Scan.png                           ← Screenshot: Scan job configuration
-├── Opens the DVWA.png                         ← Screenshot: Target web interface
-├── Register in the Nessus using ip.png        ← Screenshot: Nessus web onboarding
-├── Run the Docker.png                         ← Screenshot: Spawning target container
-├── Started the Docker.png                     ← Screenshot: Starting docker service
-├── Status of Docker.png                       ← Screenshot: Docker systemd status
-└── Vuln found during scan.png                 ← Screenshot: Vulnerability findings table
+├── README.md                                  ← Project documentation
+└── screenshots/                               ← Execution evidence & UI captures
+    ├── CMD to start and check status of Nessus.png
+    ├── Docker install for testing.png
+    ├── Downloading Plugins.png
+    ├── Enabled the Nessus Services.png
+    ├── Host.png
+    ├── Nessus Download Link.png
+    ├── Network Scan.png
+    ├── Opens the DVWA.png
+    ├── Register in the Nessus using ip.png
+    ├── Run the Docker.png
+    ├── Started the Docker.png
+    ├── Status of Docker.png
+    └── Vuln found during scan.png
 ```
 
 ---
