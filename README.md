@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://www.tenable.com/sites/drupal.tenable.com/files/styles/og_image/public/2022-04/nessus-og.png" alt="Tenable Nessus Logo" width="300"/>
+<img src="screenshots/nessus-logo.png" alt="Tenable Nessus Logo" width="280"/>
 
 # 🛡️ Tenable Nessus Vulnerability Assessment Lab
 ### Hands-On Vulnerability Scanning & Risk Assessment on Kali Linux
